@@ -7,6 +7,8 @@ import RegisterPage from "@/pages/auth/RegisterPage";
 import AuthLayout from "@/components/layout/auth/AuthLayout";
 import FormRegisterPembeli from "@/components/fragments/auth/FormRegisterPembeli";
 import FormRegisterMitra from "@/components/fragments/auth/FormRegisterMitra";
+import MainPage from "@/pages/main/MainPage";
+import MainLayout from "./components/layout/main/Main";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,15 @@ const router = createBrowserRouter([
       {
         path: "/register/mitra",
         element: <FormRegisterMitra />,
+      },
+    ],
+  },
+  {
+    element: <MainLayout />,
+    children: [
+      {
+        path: "/main",
+        element: <MainPage />,
       },
     ],
   },
