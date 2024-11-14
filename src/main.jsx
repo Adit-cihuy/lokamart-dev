@@ -9,6 +9,7 @@ import FormRegisterPembeli from "@/components/fragments/auth/FormRegisterPembeli
 import FormRegisterMitra from "@/components/fragments/auth/FormRegisterMitra";
 import MainPage from "@/pages/main/MainPage";
 import MainLayout from "./components/layout/main/Main";
+import SemuaProduct from "./pages/main/SemuaProduct";
 
 const router = createBrowserRouter([
   {
@@ -36,8 +37,12 @@ const router = createBrowserRouter([
     element: <MainLayout />,
     children: [
       {
-        path: "/",
+        path: "/Beranda",
         element: <MainPage />,
+      },
+      {
+        path: "/",
+        element: <SemuaProduct />,
       },
     ],
   },

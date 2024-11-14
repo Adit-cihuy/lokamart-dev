@@ -7,6 +7,7 @@ import ProductCard from '../card/Productcard';
 import Piring from "@/assets/piring.svg";
 import LayoutImg from '../LayoutImg';
 
+
 export default function SectionFeatured() {
     const categories = [
         {
