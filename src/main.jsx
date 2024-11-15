@@ -10,6 +10,12 @@ import FormRegisterMitra from "@/components/fragments/auth/FormRegisterMitra";
 import MainPage from "@/pages/main/MainPage";
 import MainLayout from "./components/layout/main/Main";
 import SemuaProduct from "./pages/main/SemuaProduct";
+import LoginPenjual from "./pages/auth/LoginPenjual";
+import Dashboard from "./pages/Penjual/dashboard/Dashboard";
+import LayoutPenjual from "./components/layout/LayoutPenjual";
+import TambahProduk from "./components/fragments/crudpenjual/TambahProduk";
+import InfoSaldo from "./pages/Penjual/dashboard/InfoSaldo";
+import InfoProduk from "./components/fragments/crudpenjual/InfoProduk";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <LoginPage />,
+      },
+      {
+        path: "/login/penjual",
+        element: <LoginPenjual />,
       },
       {
         path: "/register",
@@ -41,8 +51,29 @@ const router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: "/",
+        path: "/SemuaProduct",
         element: <SemuaProduct />,
+      },
+    ],
+  },
+  {
+    element: <LayoutPenjual />,
+    children: [
+      {
+        path: "/Dashboard/Mitra",
+        element: <Dashboard />,
+      },
+      {
+        path: "/TambahProduk",
+        element: <TambahProduk />,
+      },
+      {
+        path: "/InformasiSaldo",
+        element: <InfoSaldo />,
+      },
+      {
+        path: "/DaftarProduk",
+        element: <InfoProduk />,
       },
     ],
   },
