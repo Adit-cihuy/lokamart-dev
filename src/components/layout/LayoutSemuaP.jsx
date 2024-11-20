@@ -2,8 +2,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./Navbar";
 import Banner from "../fragments/Banner";
 import SectionCategory from "../fragments/section/SectionCategory";
-import ProductCard from "../fragments/card/Productcard";
-import SectionProducts from "../fragments/section/SectionProducts";
+import SectionSemuaP from "../fragments/section/SectionSemuaP";
 
 
 
@@ -14,12 +13,14 @@ const LayoutSemuaP = () => {
                 <Navbar />
                 <Banner />
                 <SectionCategory />
+                <SectionSemuaP />
                 <div className="flex-grow w-full max-w-6xl">
                     <div className="flex flex-row gap-12">
                         <Outlet />
                     </div>
                 </div>
             </div>
+            
         </div>
     );
 };

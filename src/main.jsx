@@ -16,6 +16,10 @@ import LayoutPenjual from "./components/layout/LayoutPenjual";
 import TambahProduk from "./components/fragments/crudpenjual/TambahProduk";
 import InfoSaldo from "./pages/Penjual/dashboard/InfoSaldo";
 import InfoProduk from "./components/fragments/crudpenjual/InfoProduk";
+import AboutUs from "./pages/Penjual/dashboard/AboutUs";
+import Pengaduan from "./pages/Penjual/dashboard/Pengaduan";
+import RekeningBank from "./pages/Penjual/dashboard/RekeningBank";
+import ProdukDetail from "./components/fragments/section/ProdukDetail";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +58,10 @@ const router = createBrowserRouter([
         path: "/SemuaProduct",
         element: <SemuaProduct />,
       },
+      {
+        path: "/ProdukDetail",
+        element: <ProdukDetail />,
+      },
     ],
   },
   {
@@ -64,16 +72,28 @@ const router = createBrowserRouter([
         element: <Dashboard />,
       },
       {
-        path: "/TambahProduk",
+        path: "/Dashboard/TambahProduk",
         element: <TambahProduk />,
       },
       {
-        path: "/InformasiSaldo",
+        path: "/Dashboard/InformasiSaldo",
         element: <InfoSaldo />,
       },
       {
-        path: "/DaftarProduk",
+        path: "/Dashboard/DaftarProduk",
         element: <InfoProduk />,
+      },
+      {
+        path: "/Dashboard/TentangKami",
+        element: <AboutUs />,
+      },
+      {
+        path: "/Dashboard/Pengaduan",
+        element: <Pengaduan />,
+      },
+      {
+        path: "/Dashboard/Rekening",
+        element: <RekeningBank />,
       },
     ],
   },

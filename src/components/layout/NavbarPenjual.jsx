@@ -3,8 +3,7 @@ import { ShoppingCart, MessageSquare, FileText, User } from "lucide-react";
 import { useState } from "react";
 import logomini from "@/assets/logomini.svg";
 import { useNavigate } from 'react-router-dom';
-
-export default function Navbar() {
+export default function NavbarPenjual() {
     const navigate = useNavigate()
     const [searchQuery, setSearchQuery] = useState("");
     return (
@@ -13,7 +12,7 @@ export default function Navbar() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <div
-                        onClick={() => navigate("/Beranda")}
+                        onClick={() => navigate("/Dashboard/Mitra")}
                         className="flex items-center cursor-pointer"
                     >
                         <img
@@ -41,33 +40,10 @@ export default function Navbar() {
 
                     {/* Navigation Icons */}
                     <div className="flex items-center space-x-6">
-                        {/* Pesan */}
-                        <div className="flex flex-col items-center">
-                            <MessageSquare className="h-6 w-6 text-gray-600" />
-                            <span className="text-xs text-gray-600 mt-1">Pesan</span>
-                        </div>
-
-                        {/* Transaksi */}
-                        <div className="flex flex-col items-center">
-                            <FileText className="h-6 w-6 text-gray-600" />
-                            <span className="text-xs text-gray-600 mt-1">Transaksi</span>
-                        </div>
-
-                        {/* Keranjang */}
-                        <div className="flex flex-col items-center relative">
-                            <div className="relative">
-                                <ShoppingCart className="h-6 w-6 text-gray-600" />
-                                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">
-                                    2
-                                </span>
-                            </div>
-                            <span className="text-xs text-gray-600 mt-1">Keranjang</span>
-                        </div>
-
                         {/* User Profile */}
                         <div className="flex flex-col items-center">
                             <User className="h-6 w-6 text-gray-600" />
-                            <span className="text-xs text-gray-600 mt-1">Putri Dwi</span>
+                            <span className="text-xs text-gray-600 mt-1">LokaMart</span>
                         </div>
                     </div>
                 </div>
