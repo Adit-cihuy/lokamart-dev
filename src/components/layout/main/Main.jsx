@@ -9,9 +9,9 @@ const MainLayout = () => {
       <div className="w-full p-1 pt-8 sm:p-8 sm:pb-0 space-y-16 flex flex-col items-center min-h-screen">
         <Navbar />
         <div className="flex-grow w-full max-w-6xl">
-          
-            <Outlet />
-          
+
+          <Outlet />
+
         </div>
       </div>
       <Footer />

@@ -45,7 +45,6 @@ export default function SectionProducts() {
       <div className="flex flex-row justify-between gap-4">
         <div className="flex flex-row justify-start gap-4">
           <Title title="Today" description="Flash Sales" />
-          <CountdownApp />
         </div>
         <div className="flex flex-row items-center justify-center gap-1">
           <Button size="icons" variant="secondary" className="rounded-full p-4">
