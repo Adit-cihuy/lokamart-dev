@@ -52,29 +52,30 @@ const TabsPenjual = () => {
                 <TabsList className="bg-red-500 w-full justify-between rounded-none h-auto p-0">
                     <TabsTrigger
                         value="dashboard"
-                        className="text-white data-[state=active]:bg-red-600 rounded-none px-8 py-2"
+                        className="text-white data-[state=active]:bg-red-600 data-[state=active]:underline data-[state=active]:underline-offset-2 data-[state=active]:decoration-white rounded-none px-8 py-2"
                     >
                         Dashboard
                     </TabsTrigger>
                     <TabsTrigger
                         value="penawaran"
-                        className="text-white data-[state=active]:bg-red-600 rounded-none px-8 py-2"
+                        className="text-white data-[state=active]:bg-red-600 data-[state=active]:underline data-[state=active]:underline-offset-2 data-[state=active]:decoration-white rounded-none px-8 py-2"
                     >
                         Penawaran
                     </TabsTrigger>
                     <TabsTrigger
                         value="pesanan"
-                        className="text-white data-[state=active]:bg-red-600 rounded-none px-8 py-2"
+                        className="text-white data-[state=active]:bg-red-600 data-[state=active]:underline data-[state=active]:underline-offset-2 data-[state=active]:decoration-white rounded-none px-8 py-2"
                     >
                         Pesanan
                     </TabsTrigger>
                     <TabsTrigger
                         value="pembayaran"
-                        className="text-white data-[state=active]:bg-red-600 rounded-none px-8 py-2"
+                        className="text-white data-[state=active]:bg-red-600 data-[state=active]:underline data-[state=active]:underline-offset-2 data-[state=active]:decoration-white rounded-none px-8 py-2"
                     >
                         Pembayaran
                     </TabsTrigger>
                 </TabsList>
+
 
                 {/* Tab Contents */}
                 <TabsContent value="dashboard">

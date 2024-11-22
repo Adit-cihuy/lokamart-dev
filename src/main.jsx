@@ -20,6 +20,8 @@ import AboutUs from "./pages/Penjual/dashboard/AboutUs";
 import Pengaduan from "./pages/Penjual/dashboard/Pengaduan";
 import RekeningBank from "./pages/Penjual/dashboard/RekeningBank";
 import ProdukDetail from "./components/fragments/section/ProdukDetail";
+import DetailPembayaran from "./components/fragments/section/DetailPembayaran";
+import Keranjang from "./components/fragments/section/Keranjang";
 
 const router = createBrowserRouter([
   {
@@ -61,6 +63,14 @@ const router = createBrowserRouter([
       {
         path: "/ProdukDetail",
         element: <ProdukDetail />,
+      },
+      {
+        path: "/DetailPembayaran",
+        element: <DetailPembayaran />,
+      },
+      {
+        path: "/Keranjang",
+        element: <Keranjang />,
       },
     ],
   },

@@ -125,13 +125,15 @@ export default function DetailPembayaran() {
                     </RadioGroup>
                 </div>
 
-                <Input placeholder="Kode kupon" />
-                <Button
-                    variant="outline"
-                    className="w-full border border-red-500 text-red-500 hover:bg-red-100"
-                >
-                    Aktivasi Kupon
-                </Button>
+                <div className="flex items-center gap-2">
+                    <Input placeholder="Kode kupon" className="flex-1" />
+                    <Button
+                        variant="outline"
+                        className="border border-red-500 text-red-500 hover:bg-red-100"
+                    >
+                        Aktivasi Kupon
+                    </Button>
+                </div>
 
                 <Button className="w-full bg-red-500 hover:bg-red-600">Pesan Sekarang</Button>
             </div>

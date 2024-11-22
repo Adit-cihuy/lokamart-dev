@@ -4,6 +4,7 @@ import { useState } from "react";
 import logomini from "@/assets/logomini.svg";
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Navbar() {
     const navigate = useNavigate()
     const [searchQuery, setSearchQuery] = useState("");
@@ -54,7 +55,10 @@ export default function Navbar() {
                         </div>
 
                         {/* Keranjang */}
-                        <div className="flex flex-col items-center relative">
+                        <div
+                            className="flex flex-col items-center relative cursor-pointer"
+                            onClick={() => navigate("/Keranjang")} // Panggil fungsi navigasi
+                        >
                             <div className="relative">
                                 <ShoppingCart className="h-6 w-6 text-gray-600" />
                                 <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">

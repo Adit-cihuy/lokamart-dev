@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import banner1 from "@/assets/banner1.svg";
-import banner2 from "@/assets/banner2.svg";
-import banner3 from "@/assets/banner3.svg";
+import banner4 from "@/assets/banner4.svg";
+import banner5 from "@/assets/banner5.svg";
+import banner6 from "@/assets/banner6.svg";
 import {
     Carousel,
     CarouselContent,
@@ -32,7 +32,7 @@ export default function Banner() {
     }, [api]);
 
     // Images array
-    const banners = [banner1, banner2, banner3];
+    const banners = [banner4, banner5, banner6];
 
     return (
         <div className="relative w-full">

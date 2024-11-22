@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Minus, Plus } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Keranjang() {
+    const navigate = useNavigate();
+    const [quantity, setQuantity] = useState(1); // State untuk quantity
+
+    // Fungsi untuk menambah quantity
+    const increaseQuantity = () => setQuantity(prev => prev + 1);
+
+    // Fungsi untuk mengurangi quantity (dengan batas minimum 1)
+    const decreaseQuantity = () => {
+        if (quantity > 1) {
+            setQuantity(prev => prev - 1);
+        }
+    };
+
+    const subtotal = 80000 * quantity; // Menghitung subtotal berdasarkan quantity
+
     return (
         <div className="container mx-auto p-6">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -35,17 +51,27 @@ export default function Keranjang() {
                                 <td className="py-4">IDR 80.000</td>
                                 <td className="py-4">
                                     <div className="flex items-center border rounded-md w-fit">
-                                        <button className="p-1 hover:bg-gray-50"><Minus size={16} /></button>
+                                        <button
+                                            onClick={decreaseQuantity}
+                                            className="p-1 hover:bg-gray-50"
+                                        >
+                                            <Minus size={16} />
+                                        </button>
                                         <input
                                             type="number"
-                                            value="1"
+                                            value={quantity}
                                             className="w-12 text-center border-x"
                                             readOnly
                                         />
-                                        <button className="p-1 hover:bg-gray-50"><Plus size={16} /></button>
+                                        <button
+                                            onClick={increaseQuantity}
+                                            className="p-1 hover:bg-gray-50"
+                                        >
+                                            <Plus size={16} />
+                                        </button>
                                     </div>
                                 </td>
-                                <td className="py-4">IDR 80.000</td>
+                                <td className="py-4">IDR {subtotal.toLocaleString()}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -62,7 +88,7 @@ export default function Keranjang() {
                         <div className="space-y-2 border-b pb-4">
                             <div className="flex justify-between">
                                 <span>Subtotal:</span>
-                                <span>IDR 80.000</span>
+                                <span>IDR {subtotal.toLocaleString()}</span>
                             </div>
                             <div className="flex justify-between">
                                 <span>Ongkir:</span>
@@ -71,9 +97,9 @@ export default function Keranjang() {
                         </div>
                         <div className="flex justify-between pt-4 font-medium">
                             <span>Total:</span>
-                            <span>IDR 80.000</span>
+                            <span>IDR {subtotal.toLocaleString()}</span>
                         </div>
-                        <Button className="w-full bg-red-500 hover:bg-red-600 mt-4">
+                        <Button onClick={() => navigate("/DetailPembayaran")} className="w-full bg-red-500 hover:bg-red-600 mt-4">
                             Bayar Sekarang
                         </Button>
                     </Card>

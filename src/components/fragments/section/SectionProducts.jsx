@@ -44,7 +44,7 @@ export default function SectionProducts() {
     <section className="flex flex-col justify-center space-y-4">
       <div className="flex flex-row justify-between gap-4">
         <div className="flex flex-row justify-start gap-4">
-          <Title title="Today" description="Flash Sales" />
+          <Title title="Negosiasi" description="Tawarkan Pilihanmu" />
         </div>
         <div className="flex flex-row items-center justify-center gap-1">
           <Button size="icons" variant="secondary" className="rounded-full p-4">

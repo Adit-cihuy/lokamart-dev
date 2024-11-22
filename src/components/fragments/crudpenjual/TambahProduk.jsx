@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label";
 import { ImagePlus } from "lucide-react";
 
 const TambahProduk = () => {
-    const [images, setImages] = useState(Array(6).fill(null));
+    const [images, setImages] = useState(Array(3).fill(null)); // Ubah jumlah upload foto menjadi 3
 
     const handleImageUpload = (index, event) => {
         const file = event.target.files[0];
@@ -46,7 +46,7 @@ const TambahProduk = () => {
                                 <div className="text-center">
                                     <label className="cursor-pointer">
                                         <ImagePlus className="w-6 h-6 mx-auto mb-2 text-gray-400" />
-                                        <span className="text-sm text-gray-500">Foto Utama</span>
+                                        <span className="text-sm text-gray-500">Upload Foto</span>
                                         <input
                                             type="file"
                                             accept="image/*"
